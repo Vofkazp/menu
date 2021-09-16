@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #1e2759;
+}
+.menu {
+  position: relative;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+.menu-item a {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 20px 30px;
+  text-decoration: none;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+}
+.menu-item a ion-icon {
+  font-size: 2.5em;
+  pointer-events: none;
+  opacity: 0.25;
+  transition: 0.25s;
+}
+.menu-item:hover a ion-icon {
+  opacity: 1;
+}
+#marker {
+  position: absolute;
+  top: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+#marker::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  width: 50px;
+  height: 40px;
+  background: #5da6ff;
+  box-shadow: 0 0 15px #5da6ff, 0 0 30px #5da6ff, 0 0 45px #5da6ff,
+    0 0 60px #5da6ff;
+}
